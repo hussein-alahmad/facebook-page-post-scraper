@@ -107,7 +107,7 @@ def processFacebookPageFeedStatus(status):
     status_published = datetime.datetime.strptime(
         status['created_time'], '%Y-%m-%dT%H:%M:%S+0000')
     status_published = status_published + \
-        datetime.timedelta(hours=-(time.timezone/3600))  # EST
+        datetime.timedelta(hours=-(time.timezone/3600)) 
     status_published = status_published.strftime(
         '%Y-%m-%d %H:%M:%S')  # best time format for spreadsheet programs
 
